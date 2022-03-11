@@ -1,20 +1,42 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_developer_test/src/export/app_export.dart';
 
-import 'src/app.dart';
-import 'src/settings/settings_controller.dart';
-import 'src/settings/settings_service.dart';
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  await GetStorage.init();
+  return runApp(const MyApp());
+}
 
-void main() async {
-  // Set up the SettingsController, which will glue user settings to multiple
-  // Flutter Widgets.
-  final settingsController = SettingsController(SettingsService());
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
 
-  // Load the user's preferred theme while the splash screen is displayed.
-  // This prevents a sudden theme change when the app is first displayed.
-  await settingsController.loadSettings();
-
-  // Run the app and pass in the SettingsController. The app listens to the
-  // SettingsController for changes, then passes it further down to the
-  // SettingsView.
-  runApp(MyApp(settingsController: settingsController));
+  @override
+  Widget build(BuildContext context) {
+    const colorTheme = Colors.orange;
+    return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+      onGenerateTitle: (_) => AppLocalizations.of(_)!.appTitle,
+      // THEME SECTION
+      themeMode: ThemeMode.light,
+      theme: ThemeData(
+        brightness: Brightness.light,
+        colorSchemeSeed: colorTheme,
+      ),
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+        colorSchemeSeed: colorTheme,
+      ),
+      // LANGUAGE SECTION
+      // locale: ctrl.locale,
+      fallbackLocale: const Locale('es', 'ES'),
+      supportedLocales: AppLocalizations.supportedLocales,
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      // ROUTES SECTION
+      defaultTransition: Transition.fadeIn,
+      initialRoute: AppRoutes.initial,
+      initialBinding: SplashBinding(),
+      getPages: AppPages.pages,
+    );
+  }
 }
