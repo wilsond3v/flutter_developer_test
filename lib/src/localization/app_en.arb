@@ -1,0 +1,6 @@
+{
+  "appTitle": "flutter_developer_test",
+  "@appTitle": {
+    "description": "The title of the application"
+  }
+}
