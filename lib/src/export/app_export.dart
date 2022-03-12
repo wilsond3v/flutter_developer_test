@@ -17,20 +17,22 @@ export 'package:flutter_developer_test/src/common/app_common.dart';
 export 'package:flutter_developer_test/src/controllers/controllers.dart';
 export 'package:flutter_developer_test/src/controllers/detail_controller.dart';
 export 'package:flutter_developer_test/src/controllers/home_controller.dart';
-export 'package:flutter_developer_test/src/controllers/login_controller.dart';
+export 'package:flutter_developer_test/src/controllers/auth_controller.dart';
 export 'package:flutter_developer_test/src/controllers/splash_controller.dart';
 
 // Bindings
 export 'package:flutter_developer_test/src/bindings/detail_binding.dart';
 export 'package:flutter_developer_test/src/bindings/home_binding.dart';
-export 'package:flutter_developer_test/src/bindings/login_binding.dart';
+export 'package:flutter_developer_test/src/bindings/auth_binding.dart';
 export 'package:flutter_developer_test/src/bindings/splash_binding.dart';
 
 // Pages
 export 'package:flutter_developer_test/src/app/pages/detail_page.dart';
 export 'package:flutter_developer_test/src/app/pages/home_page.dart';
-export 'package:flutter_developer_test/src/app/pages/login_page.dart';
 export 'package:flutter_developer_test/src/app/pages/splash_page.dart';
+export 'package:flutter_developer_test/src/app/pages/auth/auth_page.dart';
+export 'package:flutter_developer_test/src/app/pages/auth/auth_login_page.dart';
+export 'package:flutter_developer_test/src/app/pages/auth/auth_signin_page.dart';
 
 // Utils
 export 'package:flutter_developer_test/src/app/utils/app_extension_util.dart';

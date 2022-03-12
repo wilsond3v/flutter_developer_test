@@ -75,6 +75,7 @@ class TweenAnimationWidget<T> extends StatelessWidget {
             duration: Duration(milliseconds: duration),
             curve: curve,
             tween: tween,
+            child: child,
             builder: builder!,
           ),
         );

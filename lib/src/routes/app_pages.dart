@@ -9,13 +9,13 @@ abstract class AppPages {
       binding: HomeBinding(),
     ),
     GetPage(
-      name: AppRoutes.login,
-      page: () => LoginPage(),
-      binding: LoginBinding(),
+      name: AppRoutes.auth,
+      page: () => const AuthPage(),
+      binding: AuthBinding(),
     ),
     GetPage(
       name: AppRoutes.detail,
-      page: () => DetailPage(),
+      page: () => const DetailPage(),
       binding: DetailBinding(),
     ),
   ];

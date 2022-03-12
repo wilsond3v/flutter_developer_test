@@ -219,7 +219,7 @@ class _BaseForm extends StatelessWidget {
       maxLines: maxLines,
       autofocus: autofocus,
       maxLength: maxLength,
-      style: textTheme.labelLarge?.copyWith(color: theme.onSecondaryContainer),
+      style: textTheme.titleMedium?.copyWith(color: theme.onSecondaryContainer),
       decoration: InputDecoration(
         alignLabelWithHint: alignLabelWithHint,
         hintText: hintText,
@@ -230,7 +230,6 @@ class _BaseForm extends StatelessWidget {
         constraints: constraints,
         prefixIcon: prefixIcon,
         suffixIcon: suffixIcon,
-
         // prefixIconConstraints: BoxConstraints(minWidth: 12.w),
         // suffixIconConstraints: BoxConstraints(minWidth: 12.w),
         border: OutlineInputBorder(
@@ -264,14 +263,14 @@ class _BaseForm extends StatelessWidget {
         errorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(borderRadius),
           borderSide: BorderSide(
-            color: theme.errorContainer,
+            color: theme.error,
             width: 1.5,
           ),
         ),
         focusedErrorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(borderRadius),
           borderSide: BorderSide(
-            color: theme.errorContainer,
+            color: theme.error,
             width: 2.0,
           ),
         ),

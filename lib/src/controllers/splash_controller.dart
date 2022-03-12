@@ -6,7 +6,7 @@ class SplashController extends GetxController {
   @override
   void onReady() async {
     await 2.delay();
-    Get.offNamed(AppRoutes.login);
+    Get.offNamed(AppRoutes.auth);
     super.onReady();
   }
 }
