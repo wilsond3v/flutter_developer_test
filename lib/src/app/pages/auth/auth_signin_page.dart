@@ -142,6 +142,7 @@ class _BuildButton extends StatelessWidget {
         borderRadius: BorderRadius.circular(50),
       ),
       color: color,
+      disabledColor: context.colorScheme.surfaceVariant,
       child: BaseTextWidget(
         text: title,
         textAlign: TextAlign.center,

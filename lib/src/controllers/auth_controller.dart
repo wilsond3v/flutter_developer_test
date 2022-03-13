@@ -58,7 +58,12 @@ class AuthController extends GetxController {
       email: emailCtrl.text.trim().toLowerCase(),
       password: passwordCtrl.text,
     );
-    if (loginOk) return Get.offNamed(AppRoutes.home);
+    if (loginOk) {
+      emailCtrl.clear();
+      passwordCtrl.clear();
+      passwordVeriCtrl.clear();
+      return Get.offAllNamed(AppRoutes.home);
+    }
   }
 
   /// Iniciar sesion
@@ -105,7 +110,12 @@ class AuthController extends GetxController {
       email: emailCtrl.text.trim().toLowerCase(),
       password: passwordCtrl.text,
     );
-    if (signInOk) return Get.offNamed(AppRoutes.home);
+    if (signInOk) {
+      emailCtrl.clear();
+      passwordCtrl.clear();
+      passwordVeriCtrl.clear();
+      return Get.offAllNamed(AppRoutes.home);
+    }
   }
 
   /// Registrarse

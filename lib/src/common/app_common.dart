@@ -5,7 +5,7 @@ abstract class AppImage {
 
 /// id usados en los GetBuilder widgets
 abstract class AppUpdateId {
-  static const main = 'id_main';
+  static const homeCapturePhoto = 'id_homeCapturePhoto';
 }
 
 /*

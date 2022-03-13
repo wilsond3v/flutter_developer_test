@@ -98,7 +98,7 @@ class _BaseCircle extends StatelessWidget {
           height: 25.w,
           decoration: BoxDecoration(
             shape: BoxShape.circle,
-            color: context.colorScheme.surface,
+            color: context.colorScheme.primary.withOpacity(.5),
           ),
         ),
         builder: (_, value, child) {

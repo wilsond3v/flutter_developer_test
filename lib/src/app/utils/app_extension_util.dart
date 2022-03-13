@@ -15,14 +15,6 @@ extension AppResponsiveExt on num {
   double get sp => this * (Get.width / 3) / 100;
 }
 
-extension AppDeviceExt on BuildContext {
-  /// es mobile?
-  bool get isMobile => ResponsiveWidget.isMobile(this);
-
-  /// es Escritorio?
-  bool get isDesk => ResponsiveWidget.isDesktop(this);
-}
-
 extension AppThemeDataExt on BuildContext {
   /// acceso al colorScheme del tema de app
   ColorScheme get colorScheme => Theme.of(this).colorScheme;

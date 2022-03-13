@@ -5,6 +5,7 @@ export 'package:image_picker/image_picker.dart';
 export 'package:intl/intl.dart';
 export 'package:firebase_auth/firebase_auth.dart';
 export 'package:firebase_core/firebase_core.dart';
+export 'package:path_provider/path_provider.dart';
 
 // Routes
 export 'package:flutter_developer_test/src/routes/app_pages.dart';
@@ -40,9 +41,15 @@ export 'package:flutter_developer_test/src/app/utils/app_extension_util.dart';
 // Localizations
 export 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
+// Models
+export 'package:flutter_developer_test/src/data/models/post_model.dart';
+
+// Providers
+export 'package:flutter_developer_test/src/data/providers/post_provider.dart';
+
 // Widgets
 export 'package:flutter_developer_test/src/app/widgets/dialog_widget.dart';
-export 'package:flutter_developer_test/src/app/widgets/responsive_widget.dart';
 export 'package:flutter_developer_test/src/app/widgets/text_widget.dart';
 export 'package:flutter_developer_test/src/app/widgets/form_widget.dart';
 export 'package:flutter_developer_test/src/app/widgets/tween_animation_widget.dart';
+export 'package:flutter_developer_test/src/app/widgets/tab_widget.dart';
