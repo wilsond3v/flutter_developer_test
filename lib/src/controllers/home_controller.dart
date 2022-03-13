@@ -61,8 +61,7 @@ class HomeController extends GetxController
     }
   }
 
-  void goToDetailPage(PostModel post) => Get.toNamed(
-        AppRoutes.detail,
-        arguments: post,
-      );
+  void goToDetailPage(PostModel post) {
+    Get.toNamed(AppRoutes.detail, arguments: post);
+  }
 }
